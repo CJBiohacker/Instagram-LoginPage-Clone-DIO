@@ -1,0 +1,175 @@
+* {     // Estilização geral de base para a página. Inclui-se nessa cascata espaçamento, margens, fonte e tamanho, etc.
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: "Segoe UI",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+body {     // Estilização e formatação geral do corpo da página. Organizado em uma coluna conforme modelo do Instagram.
+    max-width: 100%;
+    min-height: 100vh;
+    background:#f3f1f1;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    flex-direction:column;
+
+    .instagram-page {     // Estilização e formatação da imagem do celular no lado esquerdo.
+        display: flex;
+        align-items: center;    
+        justify-content: start;
+        width: 60%;
+        height: 100vh;
+            
+        .phone-box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 45%;
+
+            .phone {
+                height: 48rem;
+            }
+        }
+        .side-box {     // Estilização e formatação da coluna de itens do lado direito (Caixa de Login, Caixa de Inscrição e Caixa de Download do App.  
+            display: flex;
+            align-items: center;
+            justify-content: space-be;
+            flex-direction: column;
+            width: 50%;
+
+            .login-box {     // Estilização e formatação do logotipo, foto de perfil e botões de login e remover conta.
+                border: 1px solid #DBDBDB;
+                background: rgb(244, 244, 244);
+                padding: 35px 81px 35px;
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                flex-direction: column;
+                margin: 10px;
+            
+                .logo {
+                    display: flex;
+                    align-items: center;
+                }
+                .profile-photo {
+                    border-radius: 50%;
+                    max-width: 12vh;
+                    margin: 20px 0 35px;
+                    overflow: hidden;
+                }
+                .login-button {
+                    font-size: 14px;
+                    font-weight: bold;
+                    background: #0095F6;
+                    color: white;
+                    margin-bottom: 10px;
+                    border: 3px solid #0095F6;
+                    border-radius: 5px;
+                    width: 106%;
+                    height: 4vh;
+                    &:hover{     // Adição da função de "apontar" quando o cursor do mouse passar no botão de login.
+                        cursor: pointer;
+                    }
+                }
+                .removeacc-button {
+                    font-size: 14px;
+                    font-weight: bold;
+                    background: #f3f1f1;
+                    color: #0095F6;
+                    margin-bottom: 10px;
+                    border: 3px solid #f3f1f1;
+                    border-radius: 5px;
+                    width: 106%;
+                    height: 4vh;
+                    &:hover{     // Adição da função de "apontar" quando o cursor do mouse passar por cima do botão de remover conta.
+                        cursor: pointer;
+                    }
+                }
+            }
+            .signup-box {     // Estilização e formatação da caixa de trocar ou remover conta.
+                border: 1px solid #DBDBDB;
+                padding: 30px 92px 25px;
+                background: rgb(244, 244, 244);
+
+                .not-user {
+                    font-size: 14px;
+                    color: grey;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+                .user-option {
+                    color: grey;
+
+                    .switch-acc{
+                        font-size: 14px;
+                        color: #0095F6;
+                        font-weight: bold;
+                    }
+                    .remove-acc {
+                        font-size: 14px;
+                        color: #0095F6;
+                        font-weight: bold;
+                    }
+                }
+            }
+            .getapp-box {     // Estilização e formatação da caixa de download do aplicativo.
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                width: 100vh;
+                margin-top: 20px;
+                
+                .get-app {
+                    font-size: 14px;
+                    margin-bottom: 20px;
+                }
+                .download {
+                    .appstore-logo {
+                        width: 20vh;
+                        margin: 0 3px 0 0;
+                    }                  
+                    .googleplay-logo {
+                        width: 20vh;
+                        margin: 0 0 0 3px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* media queries */
+
+@media (max-width: 1024px) {
+    .instagram-page {
+        width: 90%;
+    }
+}
+
+@media (max-width: 650px) {
+    body {
+        background-color: #ffffff;
+    }
+
+    .instagram-page {
+        width: 90%;
+    }
+
+    .phone-box {
+        display: none;
+    }
+
+    .side-box {
+        width: 100%;
+    }
+    
+    .signup-box, .login-box {
+        border: 1px solid transparent;
+    }
+}
